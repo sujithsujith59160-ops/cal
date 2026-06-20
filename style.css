@@ -1,0 +1,190 @@
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    
+}
+input{
+    display: none;
+}
+.container{
+    width: 100%;
+    text-align: center;
+}
+h1{
+    font-weight: normal;
+    font-size: 35px;
+    position: relative;
+    margin: 40px 0;
+    text-shadow: 3px 3px 6px black;
+}
+h1::before{
+    content: '';
+    position: absolute;
+    width: 50px;
+    height: 5px;
+    background-color: crimson;
+    box-shadow: 5px 5px 20px red;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    animation: animate 2s linear infinite;
+}
+@keyframes animate{
+0%{
+    width: 50px;
+}
+50%{
+    width: 350px;
+}
+100%{
+    width: 20px;
+}
+}
+.topcontent{
+    background-color: lightgray;
+    width: 90%;
+    margin: 0 auto 20px auto;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    border-radius: 20px;
+    
+    box-shadow: 3px 3px 20px lightgray
+}
+h3{
+    height: 100%;
+    background-color: lightseagreen;
+    line-height: 60px;
+    padding: 0 50px;
+    color: white;
+    border-radius: 15px;
+}
+label{
+    display:inline-block;
+    padding: 0 15px;
+    margin: 0 55px;
+    height:100%;
+    line-height: 60px;
+    font-size:20px;
+    color: white;
+    cursor: pointer;
+    transition: .5s;
+
+  
+}
+label:hover{
+    background-color: lightcyan;
+    color: black;
+border-radius: 10px;
+}
+.photo-gallery{
+    width: 90%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-gap: 20px;
+}
+.pic{
+    position: relative;
+    height: 270px;
+    border-radius: 20px;
+    box-shadow: 3px 3px 5px lightgrey;
+    transition: 1s;
+
+    
+
+}
+.pic img:hover{
+    transform: scale(1.1);
+transition-duration: 1s;
+cursor: pointer;
+
+
+
+}
+.pic img{
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    
+    
+}
+
+#check1:checked ~ .container .photo-gallery .pic{
+    opacity: 1;
+    transform: scale(1);
+    position: relative;
+    transition: .5s;
+}
+
+#check2:checked ~ .container .photo-gallery .cricketers{
+transform: scale(1);
+opacity: 1;
+position:relative;
+
+
+
+
+}
+#check2:checked ~ .container .photo-gallery .footballers,
+#check2:checked ~ .container .photo-gallery .formula{
+    opacity: o;
+    transform: scale(0);
+ 
+    transition: 0s;
+   position: absolute;
+}
+#check3:checked ~ .container .photo-gallery .footballers{
+transform: scale(1);
+opacity: 1;
+position:relative;
+filter: drop-shadow(5px 5px 10px black);
+
+
+
+}
+#check3:checked ~ .container .photo-gallery .cricketers,
+#check3:checked ~ .container .photo-gallery .formula{
+    opacity: o;
+    transform: scale(0);
+ 
+    transition: 0s;
+   position: absolute;
+}
+
+
+
+#check4:checked ~ .container .photo-gallery .formula{
+transform: scale(1);
+opacity: 1;
+position:relative;
+filter: drop-shadow(5px 5px 10px red );
+
+
+
+}
+#check4:checked ~ .container .photo-gallery .cricketers,
+#check4:checked ~ .container .photo-gallery .footballers{
+    opacity: o;
+    transform: scale(0);
+ 
+    transition: 0s;
+   position: absolute;
+}
+
+
+
+
+
+
+
+    
+
+
+
+
+
+
+    
